@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="stx_spring_ioc:Web exploded">
+    <output-path>$PROJECT_DIR$/stx_pring_aop/artifacts/stx_spring_ioc_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="stx_spring_ioc/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="stx_spring_ioc" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
