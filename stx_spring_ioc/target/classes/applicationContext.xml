@@ -13,7 +13,7 @@
 <!--<bean id="userDao" factory-bean="factory" factory-method="setUserDao"></bean>-->
 
 <!--
-    第一种、依赖注入方式。ref="userDao"与id="userDao"配对。ref是引用。
+    第一种set方法注入、依赖注入方式。ref="userDao"与id="userDao"配对。ref是引用。
     name="userDao"这个是set方法setUserDao(UserDao userDao){}的方法名。首字母小写后的名字。
     具体代码：
     <bean id="userDao" class="com.stx.dao.impl.UserDaoImpl"></bean>
@@ -28,7 +28,7 @@
       <bean id="userService" class="com.stx.service.impl.UserServiceImpl" ></bean>-->
 
 
-    <!--第三种依赖注入，有参构造方法注入。-->
+    <!--第三种有参构造依赖注入，有参构造方法注入。-->
     <!--name="userDao" 它是构造方法内的参数userDao。  ref="userDao"是容器id对象引用。-->
     <!--<bean id="userDao" class="com.stx.dao.impl.UserDaoImpl"></bean>
     <bean id="userService" class="com.stx.service.impl.UserServiceImpl" >

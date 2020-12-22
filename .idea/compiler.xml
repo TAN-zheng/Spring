@@ -9,11 +9,13 @@
         <module name="stx_spring_ioc" />
         <module name="untitled" />
         <module name="stx_spring_aop" />
+        <module name="stx_spring_ioc_anno" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="9">
-      <module name="stx_spring_aop" target="9" />
-      <module name="stx_spring_ioc" target="9" />
+    <bytecodeTargetLevel target="10">
+      <module name="stx_spring_aop" target="10" />
+      <module name="stx_spring_ioc" target="10" />
+      <module name="stx_spring_ioc_anno" target="10" />
     </bytecodeTargetLevel>
   </component>
 </project>

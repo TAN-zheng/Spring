@@ -34,7 +34,10 @@
     <bean id="userService" class="com.stx.service.impl.UserServiceImpl" >
         <constructor-arg name="userDao" ref="userDao"></constructor-arg>
     </bean>-->
-
+    <bean id="userDao" class="com.stx.dao.impl.UserDaoImpl"></bean>
+    <bean id="userService" class="com.stx.service.impl.UserServiceImpl" >
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
 <!-- ************************1***********************   -->
     <!-- ************************2***********************   -->
 <!--    集合注入，List，Map，User,UserDaoImpl-->
@@ -43,7 +46,7 @@
     private Map<String, User> userMap;
     private Properties properties;
     -->
-    <bean id="userDao" class="com.stx.dao.impl.UserDaoImpl">
+    <bean id="userDao1" class="com.stx.dao.impl.UserDaoImpl">
         <property name="strList">
             <list>
                 <value>aaa</value>

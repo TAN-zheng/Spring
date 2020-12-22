@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                            ">
+<!--加载外部配置文件：许哟配置头部信息。
+    xmlns:context="http://www.springframework.org/schema/context"
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    (上面这个头部信息写了，0、<context:property-placeholder>这个标签才能用。)
+    1、location,classpath表示这个resource文件夹里面的文件可以被加载到。
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    2、value="${driver}"表示获取properties文件里面的key对应的值。
+-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${driver}"></property>
+        <property name="url" value="${url}"></property>
+        <property name="username" value="${user}"></property>
+        <property name="password" value="${password}"></property>
+    </bean>
+</beans>
